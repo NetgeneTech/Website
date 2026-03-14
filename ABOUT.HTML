@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netgene Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { scroll-behavior: smooth; }
+
+    /* Navbar scroll effect */
+    #navbar {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: none;
+      transition: background 0.3s ease;
+    }
+    .navbar-scrolled {
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      backdrop-filter: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Section fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero video parallax */
+    .hero-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120%;
+      object-fit: cover;
+      z-index: -10;
+      transform: translateY(0);
+      transition: transform 0.2s;
+    }
+
+    /* Hero text shadow for readability */
+    #home h1, #home p {
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+
+
+    .Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.Contact .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.Contact input[type="text"],
+.Contact input[type="email"],
+.Contact input[type="number"],
+.Contact input[type="submit"],
+.Contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.Contact textarea {
+    resize: vertical;
+}
+
+.Contact input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Contact input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Change placeholder text color */
+.Contact input[type="text"]::placeholder,
+.Contact input[type="email"]::placeholder,
+.Contact input[type="number"]::placeholder,
+.Contact textarea::placeholder {
+    color: #999;
+}
+
+/* Optional: Style heading */
+.Contact .heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Optional: Add styles for spans */
+.Contact .heading span {
+    color: #007bff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem  var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+
+    /* Mobile menu styling */
+    @media (max-width: 768px) {
+      #nav-links {
+        background: #00ff5e;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      #nav-links.open {
+        max-height: 300px;
+      }
+      #nav-links a {
+        color: rgba(255, 255, 255, 0.95);
+        display: block;
+        padding: 0.5rem 0;
+      }
+    }
+  </style>
+
+<style>
+  .marquee-left, .marquee-right {
+    display: inline-flex;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+
+  /* First row moves to the left */
+  .marquee-left {
+    animation-name: marquee-left;
+    animation-duration: 40s;
+  }
+  @keyframes marquee-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Half of total width because we duplicated */
+  }
+
+  /* Second row moves to the right */
+  .marquee-right {
+    animation-name: marquee-right;
+    animation-duration: 40s;
+  }
+  @keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+
+  /* Pause on hover */
+  .marquee-left:hover, .marquee-right:hover {
+    animation-play-state: paused;
+  }
+</style>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Background Video with Parallax -->
+  <img src="intro-bg.jpg" alt="Background photo" class="hero-video" />
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full transition-all duration-300 z-50" aria-label="Main Navigation">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="image\Netgene_logo_1.png" alt="Netgene Logo" class="h-10 w-auto" />
+      </a>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-expanded="false" aria-controls="nav-links">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+        </svg>
+      </button>
+
+      <!-- Nav Links -->
+      <ul id="nav-links" class="hidden md:flex space-x-6">
+        <li><a href="#home" class="text-white hover:text-green-600 transition">Home</a></li>
+        <li><a href="#services" class="text-white hover:text-green-600 transition">Services</a></li>
+        <li><a href="#about" class="text-white hover:text-green-600 transition">About</a></li>
+        <li><a href="#contact" class="text-white hover:text-green-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center text-center text-white bg-black bg-opacity-50 fade-in">
+    <div>
+      <h1 class="text-5xl font-bold mb-4">Welcome to Netgene</h1>
+      <p class="text-lg mb-6">Innovating with Software & Hardware Solutions</p>
+      <a href="#services" class="bg-green-600 px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+<section id="services" class="py-20 bg-gray-100 fade-in">
+  <div class="max-w-6xl mx-auto text-center">
+    
+    <h2 class="text-4xl font-bold text-green-600 mb-10">Our Services</h2>
+    
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Through Netgene Technologies' full range of services, we create strong digital foundations and flexible architectures tailored for your company's evolving needs.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+        <i data-lucide="layout-dashboard" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Web Design</h3>
+        <p class="text-gray-600">Modern, responsive and user-friendly web designs.</p>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+        <i data-lucide="app-window" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+        <h3 class="text-2xl font-bold text-green-600 mb-2">App Development</h3>
+        <p class="text-gray-600">Robust Android & web app solutions for all applications.</p>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+        <i data-lucide="sparkles" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Branding</h3>
+        <p class="text-gray-600">Powerful brand identity & creative visual strategies.</p>
+      </div>
+
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+        <i data-lucide="megaphone" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Marketing</h3>
+        <p class="text-gray-600">Digital campaigns & social media growth strategies.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</section>
+
+  
+
+ <!-- About Us Section -->
+<section id="about" class="py-20 bg-white fade-in">
+  <div class="max-w-6xl mx-auto px-6 md:px-0">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <div class="flex justify-center">
+        <img src="https://images.unsplash.com/photo-1521790361543-f645cf042ec4"
+             alt="About Netgene Technologies"
+             class="rounded-xl shadow-lg object-cover w-full max-w-md">
+      </div>
+
+      <!-- Right Content (centered vertically) -->
+      <div class="text-left flex flex-col justify-center">
+        <h2 class="text-4xl font-bold text-green-600 mb-6">About Us</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Netgene Technologies is one of the leading information technology companies. Through its Global Standards,
+          Innovation Network, and Solution Accelerators, we help organizations address business challenges effectively.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Who We Are</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          In a short span, Netgene Technologies has carved a niche for itself by acquiring major domestic projects, backed
+          by strong commitments and capabilities.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">What We Do</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We provide high-quality on-site software development services across multiple hardware and software platforms.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Why Choose Us</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Every IT & ITES project is unique. Clients benefit from cost-effective solutions and technology transfer that enhances local value creation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+ <section id="projects" class="bg-black py-16 text-center overflow-hidden">
+  <h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-12">
+    COMPLETED PROJECTS
+  </h2>
+
+  <!-- First Row -->
+  <div class="overflow-hidden whitespace-nowrap mb-8 relative">
+    <div class="marquee-left inline-flex space-x-6">
+      <!-- Original Set -->
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img1.jpg" alt="Project 1" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Features a solar panel array installed in an industrial setting.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img2.jpg" alt="Project 2" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Likely monocrystalline or polycrystalline silicon panels with high efficiency.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img3.jpg" alt="Project 3" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Converts DC electricity to AC for home or industrial appliances.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img4.jpg" alt="Project 4" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Installation of rooftop solar panel systems.
+        </p>
+      </div>
+
+      <!-- Duplicate Set for Seamless Loop -->
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img1.jpg" alt="Project 1" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Features a solar panel array installed in an industrial setting.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img2.jpg" alt="Project 2" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Likely monocrystalline or polycrystalline silicon panels with high efficiency.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img3.jpg" alt="Project 3" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Converts DC electricity to AC for home or industrial appliances.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img4.jpg" alt="Project 4" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Installation of rooftop solar panel systems.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="overflow-hidden whitespace-nowrap relative">
+    <div class="marquee-right inline-flex space-x-6">
+      <!-- Original Set -->
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img5.jpg" alt="Project 5" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Advanced solar energy system with smart inverter.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img6.jpg" alt="Project 6" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Industrial solar grid installation for power saving.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img7.jpg" alt="Project 7" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Real-time monitoring of solar power generation.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img8.jpg" alt="Project 8" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Solar power project implemented in educational institutions.
+        </p>
+      </div>
+
+      <!-- Duplicate Set for Seamless Loop -->
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img5.jpg" alt="Project 5" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Advanced solar energy system with smart inverter.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img6.jpg" alt="Project 6" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Industrial solar grid installation for power saving.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img7.jpg" alt="Project 7" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Real-time monitoring of solar power generation.
+        </p>
+      </div>
+      <div class="w-96 bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+        <img src="img8.jpg" alt="Project 8" class="w-full h-56 object-cover" />
+        <p class="text-green-400 text-sm p-2">
+          Solar power project implemented in educational institutions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="bg-gray-900 py-16 text-white">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-8">FEATURED PRODUCTS</h2>
+    <p class="text-gray-300 mb-12">Visit our shop to see amazing creations from our Projects.</p>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-10 space-x-6">
+      <button id="tab-deep" class="tab-btn text-green-400 border-b-2 border-green-400 pb-1">DEEP LEARNING</button>
+      <button id="tab-ml" class="tab-btn text-gray-400 hover:text-green-400 pb-1">MACHINE LEARNING</button>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="relative">
+      <!-- Left Arrow -->
+      <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-600 shadow-lg z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <!-- Cards Container -->
+      <div id="carousel" class="flex space-x-6 overflow-x-auto scroll-smooth pb-4 px-12 no-scrollbar">
+        <!-- Deep Learning Cards -->
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep1.png" alt="Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Efficient Firearms Monitoring Technique for Smart Cities</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep2.png" alt="Project 2" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Lightweight Model for Ship Localizations in SAR Images</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep3.png" alt="Project 3" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Lightweight Robust Deep Learning Model for Diabetic Retinopathy Classification</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep4.png" alt="Project 4" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Novel Transformer Model with Multiple Instance Learning for Retinopathy Detection</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, AI, Deep Learning</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <!-- Machine Learning Cards (Hidden by Default) -->
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml1.png" alt="ML Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Machine Learning Based Air Quality Prediction System</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml2.png" alt="ML Project 2" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Crop Yield Prediction Using Machine Learning</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Agriculture</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml3.png" alt="ML Project 3" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Customer Churn Prediction for Telecom Industry</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Data Analysis</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml4.png" alt="ML Project 4" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Energy Consumption Forecasting Using Regression Models</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-600 shadow-lg z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- contact section -->
+<section class="Contact" id="Contact">
+    <h2 class="heading">Contact<span> Me!</span></h2>
+
+    <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div class="input-box">
+            <input type="text" name="Full_Name" placeholder="Full Name" required>
+            <input type="email" name="Email_Address" placeholder="Email Address" required>
+        </div>
+
+        <textarea name="Message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+</section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p> Copyright &copy; 2024 by S MANOJ KUMAR | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const links = navbar.querySelectorAll("a");
+    const heroVideo = document.querySelector(".hero-video");
+    const sections = document.querySelectorAll(".fade-in");
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    // Scroll Events
+    window.addEventListener("scroll", () => {
+      // Navbar scroll style
+      if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled");
+        links.forEach(link => link.classList.replace("text-white", "text-green-600"));
+      } else {
+        navbar.classList.remove("navbar-scrolled");
+        links.forEach(link => link.classList.replace("text-green-600", "text-white"));
+      }
+
+      // Hero video parallax
+      heroVideo.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+
+      // Section fade-in
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Initial fade-in on load
+    window.addEventListener("load", () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          section.classList.add("visible");
+        }
+      });
+    });
+
+    // Hamburger menu toggle
+    menuBtn.addEventListener("click", () => {
+      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuBtn.setAttribute("aria-expanded", !expanded);
+      navLinks.classList.toggle("hidden");
+      navLinks.classList.toggle("open");
+    });
+  </script>
+
+  <!-- Tab & Carousel Script -->
+<script>
+  const tabDeep = document.getElementById("tab-deep");
+  const tabML = document.getElementById("tab-ml");
+  const deepCards = document.querySelectorAll(".deep-card");
+  const mlCards = document.querySelectorAll(".ml-card");
+  const carousel = document.getElementById("carousel");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  // Tab switching
+  tabDeep.addEventListener("click", () => {
+    tabDeep.classList.add("text-green-400", "border-b-2", "border-green-400");
+    tabML.classList.remove("text-green-400", "border-b-2", "border-green-400");
+    tabML.classList.add("text-gray-400");
+    deepCards.forEach(c => c.classList.remove("hidden"));
+    mlCards.forEach(c => c.classList.add("hidden"));
+  });
+
+  tabML.addEventListener("click", () => {
+    tabML.classList.add("text-green-400", "border-b-2", "border-green-400");
+    tabDeep.classList.remove("text-green-400", "border-b-2", "border-green-400");
+    tabDeep.classList.add("text-gray-400");
+    deepCards.forEach(c => c.classList.add("hidden"));
+    mlCards.forEach(c => c.classList.remove("hidden"));
+  });
+
+  // Carousel navigation
+  nextBtn.addEventListener("click", () => {
+    carousel.scrollBy({ left: 300, behavior: "smooth" });
+  });
+  prevBtn.addEventListener("click", () => {
+    carousel.scrollBy({ left: -300, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>

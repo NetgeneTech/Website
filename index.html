@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netgene Company</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full transition-all duration-300 z-50" aria-label="Main Navigation">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="image\Netgene_logo_1.png" alt="Netgene Logo" class="h-10 w-auto" />
+      </a>
+
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1 focus:outline-none z-[999] relative" aria-expanded="false" aria-controls="nav-links">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+
+
+      <!-- Nav Links -->
+      <ul id="nav-links" class="hidden md:flex space-x-6">
+        <li><a href="#services" class="text-white hover:text-green-600 transition">Services</a></li>
+        <li><a href="Project.html" class="text-white hover:text-green-600 transition">Shop</a></li>
+        <li><a href="#contact" class="text-white hover:text-green-600 transition">Contact</a></li>
+        <li><a href="gallery.html" class="text-white hover:text-green-600 transition">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+ <!-- Background Video -->
+<section id="home" class="relative h-screen flex items-center justify-center text-center text-white">
+
+  <!-- Background Video (ONLY for this section) -->
+  <video class="absolute inset-0 w-full h-full object-cover z-0" autoplay muted loop playsinline>
+    <source src="image\BG.mp4" type="video/mp4">
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20">
+    <h1 class="text-5xl font-bold mb-4">Welcome to Netgene Technologies</h1>
+    <p class="text-lg mb-6">Innovating with Software & Hardware Solutions</p>
+    <a href="#services" class="bg-green-600 px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition">
+      Explore Services
+    </a>
+  </div>
+
+</section>
+
+  <!-- Services Section -->
+<section id="services" class="py-20 bg-gray-100 fade-in">
+  <div class="max-w-6xl mx-auto text-center">
+    
+    <h2 class="text-4xl font-bold text-green-600 mb-10">Our Services</h2>
+    
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      Through Netgene Technologies' full range of services, we create strong digital foundations and flexible architectures tailored for your company's evolving needs.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+
+      <a href="Web Design.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+          <i data-lucide="layout-dashboard" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">Web Design</h3>
+          <p class="text-gray-600">Modern, responsive and user-friendly web designs.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+      
+      <a href="app development.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+          <i data-lucide="app-window" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">App Development</h3>
+          <p class="text-gray-600">Robust Android & web app solutions for all applications.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+      <a href="IT Solutions.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+          <i data-lucide="sparkles" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">IT Solutions</h3>
+          <p class="text-gray-600">Powerful brand identity & creative visual strategies.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+      <a href="Marketing.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer">
+          <i data-lucide="megaphone" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">Marketing</h3>
+          <p class="text-gray-600">Digital campaigns & social media growth strategies.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+      <a href="Internship.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+          <i data-lucide="users" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">Internship</h3>
+          <p class="text-gray-600">Gain hands-on experience with our internship programs.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+      <a href="Final Year Project.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+          <i data-lucide="graduation-cap" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">Final Year Project</h3>
+          <p class="text-gray-600">Collaborate with us on innovative final year projects.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+      <a href="placement.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+          <i data-lucide="briefcase" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">Placement</h3>
+          <p class="text-gray-600">Career placement programs to connect talented graduates with top companies.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+      
+      <a href="cad.html" class="block">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+          <i data-lucide="computer" class="w-10 h-10 mx-auto text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-600 mb-2">CAD, CAM & CAE Training</h3>
+          <p class="text-gray-600">Hands-on training for CAD, CAM, and CAE software.</p>
+          <p class=" font-bold">For More</p>
+        </div>
+      </a>
+
+
+    </div>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</section>
+
+ <!-- About Us Section -->
+<section id="about" class="py-20 bg-white fade-in">
+  <div class="max-w-6xl mx-auto px-6 md:px-0">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <div class="flex justify-center">
+        <img src="https://images.unsplash.com/photo-1521790361543-f645cf042ec4"
+             alt="About Netgene Technologies"
+             class="rounded-xl shadow-lg object-cover w-full max-w-md">
+      </div>
+
+      <!-- Right Content (centered vertically) -->
+      <div class="text-left flex flex-col justify-center">
+        <h2 class="text-4xl font-bold text-green-600 mb-6">About Us</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Netgene Technologies is one of the leading information technology companies. Through its Global Standards,
+          Innovation Network, and Solution Accelerators, we help organizations address business challenges effectively.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Who We Are</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          In a short span, Netgene Technologies has carved a niche for itself by acquiring major domestic projects, backed
+          by strong commitments and capabilities.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">What We Do</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          We provide high-quality on-site software development services across multiple hardware and software platforms.
+        </p>
+
+        <h3 class="text-2xl font-bold text-green-600 mb-2">Why Choose Us</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Every IT & ITES project is unique. Clients benefit from cost-effective solutions and technology transfer that enhances local value creation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <section id="projects" class="bg-black py-16 text-center overflow-hidden">
+  <h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-12">
+    COMPLETED PROJECTS
+  </h2>
+
+  <!-- First Row -->
+  <div class="overflow-hidden whitespace-nowrap relative mb-12">
+    <div class="marquee-left inline-flex space-x-6">
+      <!-- Original Set -->
+<div class="flex justify-center items-center py-6">
+ <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+  <img src="Project/Self Balancing Motocycle.jpg" class="w-full h-40 object-cover" />
+  <div class="p-4">
+    <h3 class="text-lg font-bold text-green-400 mb-3" style="max-width: 20%;">
+      Self-Balancing Motorcycle
+    </h3>
+
+    <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3">
+      The design and fabrication of a rapid prototype for a self-balancing motorcycle involve multiple stages, including the 
+      determination of design requirements, mechanical and electronic system design, prototype fabrication, and testing to 
+      ensure performance standards are met. The mechanical design consists of the frame, suspension, wheels, and steering system,
+       while the electronic design integrates control systems, sensors, and motors. Fabrication techniques such as 3D printing, 
+       CNC machining, and welding are employed to manufacture the components. These components are assembled to form the 
+       prototype, which can then be used for further development and optimization toward a fully functional self-balancing 
+       motorcycle
+    </div>
+
+    <button class="read-more text-green-400 text-xs font-semibold hover:underline mb-3">
+      Read More...
+    </button>
+
+    <div class="flex flex-wrap justify-center gap-1 text-xs text-green-400">
+      <span class="bg-green-400/10 px-2 py-1 rounded">Self-balancing mechanism</span>
+      <span class="bg-green-400/10 px-2 py-1 rounded">Gyroscope</span>
+      <span class="bg-green-400/10 px-2 py-1 rounded">Sensor</span>
+    </div>
+  </div>
+</div>  
+</div>
+
+
+   <!-- 2 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\air engine.jpeg" alt="Self Balancing Motorcycle" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Air Engine
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          Environmental pollution in metropolitan cities is rising rapidly, primarily due to the increased use of fossil 
+          fuel-powered vehicles. One promising alternative is a compressed air-powered engine. The key advantage of this engine
+           is that it does not require hydrocarbon fuel, thus eliminating combustion and emissions. In this project, a four-stroke
+            single-cylinder spark ignition (SI) engine is converted into a two-stroke engine that operates using compressed air. 
+            This modification makes it simple, cost-effective, and easy to adapt since it utilizes existing engine structures. Air,
+             being abundant and renewable, serves as a clean and sustainable fuel source for this innovative system.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Compressed air</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Non-combustion engine</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Renewable energy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 3 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center" >
+    <!-- Image -->
+    <img src="Project\Cruise control main.jpg" alt="Cruise Control Lever in Automobiles" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4" >
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Cruise Control Lever </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >in Automobiles</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The cruise control system is a crucial component in modern automotive control engineering, enabling a vehicle to 
+          maintain a constant speed without continuous driver input. This project focuses on designing a mechanical cruise 
+          control lever that can sustain a constant vehicle speed, especially on long journeys and inclined roads. The proposed 
+          system improves driving comfort and reduces fatigue. Cruise control continues to be an essential feature in vehicles 
+          for ensuring consistent performance and driver convenience.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Cruise control lever</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Acceleration</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Clutch</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Brake</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 4 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Parallel parking  with Wiper Motor.jpeg" alt="Parallel Parking System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Parallel Parking System
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          This project proposes a manual driving system for a four-wheel independent steering and driving vehicle to facilitate 
+          efficient parallel parking. The system aims to reduce human error and collisions that often occur during parking in 
+          limited spaces. A small-scale prototype is developed to demonstrate the design’s feasibility and functionality. The 
+          results indicate that the developed model can identify suitable parking spaces, execute parallel parking maneuvers, 
+          avoid front and rear obstacles, and significantly reduce parking time.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Driving system</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Parking</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Parallel parking</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Autonomous maneuver</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 5 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Pneumatic Hand Brake Release.jpeg" alt="Pneumatic Automatic Hand Brake Release System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Pneumatic Automatic Hand </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Brake Release System</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The handbrake is a vital safety component in vehicles. Traditional handbrake systems rely on manual engagement using a 
+          ratchet locking mechanism, which may lead to accidents if not properly activated. To address this issue, a pneumatic 
+          automatic handbrake system is proposed. The system employs an electric motor and pneumatic actuator to engage and 
+          release the handbrake automatically, minimizing driver error. This design is simple, efficient, and cost-effective, 
+          enhancing both safety and convenience.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Handbrake</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatics</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Safety system</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pressure regulator</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 6 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\PNEUMATIC JACK.png" alt="Pneumatic Jack" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Pneumatic Jack
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The term pneumatic originates from the Greek word pneuma, meaning "air" or "breath." Pneumatics refers to the use of 
+          compressed air to perform mechanical work. This project involves the design and fabrication of a pneumatic jack, which 
+          uses pressurized air to lift heavy loads efficiently. Compared to conventional jacks, the pneumatic jack is easier to
+          operate, faster, and safer. It demonstrates the importance of pneumatics in modern automation and mechanical handling 
+          systems.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatic</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Mechanical automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Jack</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Compressed air</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 7 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Pneumatic Vice.jpeg" alt="Pneumatic Vice" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Pneumatic Vice
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          A vice is a mechanical device used to hold workpieces securely during machining operations such as drilling, sawing, 
+          or milling. This project focuses on developing an automatic pneumatic vice that provides a quick and efficient clamping 
+          mechanism using compressed air. The system ensures accurate alignment, consistent pressure, and reduced manual effort. 
+          The pneumatic vice enhances productivity, precision, and safety in machining operations.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatic vice</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Clamping</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Machining</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 8 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\River Cleaning Robot - With Plastic Detector.jpeg" alt="Floating Garbage Cleaning System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Floating Garbage </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Cleaning System</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          Plastic waste pollution poses a severe threat to aquatic environments and human health. This project presents the 
+          design and fabrication of a manually controlled floating garbage cleaning system capable of collecting plastic and 
+          floating waste from water surfaces. The system is mobile, flexible, and energy-efficient, making it suitable for 
+          cleaning lakes, rivers, and other water bodies. Experimental results demonstrate the prototype’s effectiveness in 
+          collecting and disposing of floating waste, contributing to a cleaner and more sustainable environment.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Garbage cleaning</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Water pollution</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Floating robot</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Waste collection system</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 9 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project/Stamping Machine Without Sensor.jpeg" alt="Stamping Machine" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Stamping Machine
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+         Stamping is a crucial process in packaging and labeling across various industries. However, small-scale enterprises 
+         often rely on manual stamping methods due to the high cost of automation, leading to inefficiency and increased labor 
+         costs. This project aims to design and fabricate an affordable, easy-to-maintain stamping machine suitable for small 
+         industries. The developed system enhances productivity, reduces operational costs, and ensures compliance with industrial 
+         standards.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Stamping machine</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Packaging</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Industrial automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Small-scale manufacturing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 10 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Timed speed breaker power generation.jpeg" alt="Timed Speed Breaker Power Generation System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Timed Speed Breaker </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Power Generation System</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+         This project focuses on designing and fabricating a timed speed breaker capable of generating electricity through vehicular motion. When a vehicle passes over the speed breaker, it compresses the mechanism, which in turn rotates a flywheel connected to a generator to produce electricity. The generated power can be used immediately or stored for later use. The system design utilizes 3D modeling software for structural and mechanical analysis. Materials such as metal frames, sheet metal, shafts, and wiper motors are employed for fabrication. This innovative setup demonstrates a sustainable and cost-effective approach to energy generation from vehicular movement.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Timed speed breaker</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Power generation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Sustainable energy</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Innovative design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="overflow-hidden whitespace-nowrap relative">
+    <div class="marquee-right inline-flex space-x-6">
+      <!-- Original Set -->
+       <!-- 10 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Timed speed breaker power generation.jpeg" alt="Timed Speed Breaker Power Generation System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Timed Speed Breaker </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Power Generation System</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+         This project focuses on designing and fabricating a timed speed breaker capable of generating electricity through vehicular motion. When a vehicle passes over the speed breaker, it compresses the mechanism, which in turn rotates a flywheel connected to a generator to produce electricity. The generated power can be used immediately or stored for later use. The system design utilizes 3D modeling software for structural and mechanical analysis. Materials such as metal frames, sheet metal, shafts, and wiper motors are employed for fabrication. This innovative setup demonstrates a sustainable and cost-effective approach to energy generation from vehicular movement.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Timed speed breaker</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Power generation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Sustainable energy</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Innovative design</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 9 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project/Stamping Machine Without Sensor.jpeg" alt="Stamping Machine" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Stamping Machine
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+         Stamping is a crucial process in packaging and labeling across various industries. However, small-scale enterprises 
+         often rely on manual stamping methods due to the high cost of automation, leading to inefficiency and increased labor 
+         costs. This project aims to design and fabricate an affordable, easy-to-maintain stamping machine suitable for small 
+         industries. The developed system enhances productivity, reduces operational costs, and ensures compliance with industrial 
+         standards.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Stamping machine</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Packaging</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Industrial automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Small-scale manufacturing</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- 8 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\River Cleaning Robot - With Plastic Detector.jpeg" alt="Floating Garbage Cleaning System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Floating Garbage </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Cleaning System</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          Plastic waste pollution poses a severe threat to aquatic environments and human health. This project presents the 
+          design and fabrication of a manually controlled floating garbage cleaning system capable of collecting plastic and 
+          floating waste from water surfaces. The system is mobile, flexible, and energy-efficient, making it suitable for 
+          cleaning lakes, rivers, and other water bodies. Experimental results demonstrate the prototype’s effectiveness in 
+          collecting and disposing of floating waste, contributing to a cleaner and more sustainable environment.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Garbage cleaning</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Water pollution</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Floating robot</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Waste collection system</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 7 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Pneumatic Vice.jpeg" alt="Pneumatic Vice" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Pneumatic Vice
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          A vice is a mechanical device used to hold workpieces securely during machining operations such as drilling, sawing, 
+          or milling. This project focuses on developing an automatic pneumatic vice that provides a quick and efficient clamping 
+          mechanism using compressed air. The system ensures accurate alignment, consistent pressure, and reduced manual effort. 
+          The pneumatic vice enhances productivity, precision, and safety in machining operations.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatic vice</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Clamping</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Machining</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- 6 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\PNEUMATIC JACK.png" alt="Pneumatic Jack" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Pneumatic Jack
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The term pneumatic originates from the Greek word pneuma, meaning "air" or "breath." Pneumatics refers to the use of 
+          compressed air to perform mechanical work. This project involves the design and fabrication of a pneumatic jack, which 
+          uses pressurized air to lift heavy loads efficiently. Compared to conventional jacks, the pneumatic jack is easier to
+          operate, faster, and safer. It demonstrates the importance of pneumatics in modern automation and mechanical handling 
+          systems.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatic</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Mechanical automation</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Jack</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Compressed air</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- 5 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Pneumatic Hand Brake Release.jpeg" alt="Pneumatic Automatic Hand Brake Release System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Pneumatic Automatic Hand </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Cleaning System</h3>
+
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The handbrake is a vital safety component in vehicles. Traditional handbrake systems rely on manual engagement using a 
+          ratchet locking mechanism, which may lead to accidents if not properly activated. To address this issue, a pneumatic 
+          automatic handbrake system is proposed. The system employs an electric motor and pneumatic actuator to engage and 
+          release the handbrake automatically, minimizing driver error. This design is simple, efficient, and cost-effective, 
+          enhancing both safety and convenience.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Handbrake</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pneumatics</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Safety system</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Pressure regulator</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- 4 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Parallel parking  with Wiper Motor.jpeg" alt="Parallel Parking System" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Parallel Parking System
+
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          This project proposes a manual driving system for a four-wheel independent steering and driving vehicle to facilitate 
+          efficient parallel parking. The system aims to reduce human error and collisions that often occur during parking in 
+          limited spaces. A small-scale prototype is developed to demonstrate the design’s feasibility and functionality. The 
+          results indicate that the developed model can identify suitable parking spaces, execute parallel parking maneuvers, 
+          avoid front and rear obstacles, and significantly reduce parking time.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Driving system</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Parking</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Parallel parking</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Autonomous maneuver</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- 3 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Cruise control main.jpg" alt="Cruise Control Lever in Automobiles" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3" >Cruise Control Lever </h3>
+      <h3 class="text-xl font-bold text-green-400 mb-3" >in Automobiles</h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The cruise control system is a crucial component in modern automotive control engineering, enabling a vehicle to 
+          maintain a constant speed without continuous driver input. This project focuses on designing a mechanical cruise 
+          control lever that can sustain a constant vehicle speed, especially on long journeys and inclined roads. The proposed 
+          system improves driving comfort and reduces fatigue. Cruise control continues to be an essential feature in vehicles 
+          for ensuring consistent performance and driver convenience.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Cruise control lever</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Acceleration</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Clutch</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Brake</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <!-- 2 Image -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\air engine.jpeg" alt="Self Balancing Motorcycle" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Air Engine
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          Environmental pollution in metropolitan cities is rising rapidly, primarily due to the increased use of fossil 
+          fuel-powered vehicles. One promising alternative is a compressed air-powered engine. The key advantage of this engine
+           is that it does not require hydrocarbon fuel, thus eliminating combustion and emissions. In this project, a four-stroke
+            single-cylinder spark ignition (SI) engine is converted into a two-stroke engine that operates using compressed air. 
+            This modification makes it simple, cost-effective, and easy to adapt since it utilizes existing engine structures. Air,
+             being abundant and renewable, serves as a clean and sustainable fuel source for this innovative system.
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Air engine</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Compressed air</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Non-combustion engine</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Renewable energy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- First Row -->
+  <div class="overflow-hidden whitespace-nowrap relative mb-12">
+    <div class="marquee-left inline-flex space-x-6">
+      <!-- Original Set -->
+<div class="flex justify-center items-center py-6">
+  <div class="w-72 bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-green-600/40 transition text-center">
+    <!-- Image -->
+    <img src="Project\Self Balancing Motocycle.jpg" alt="Self Balancing Motorcycle" class="w-full h-40 object-cover" />
+    <!-- Content -->
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400 mb-3">
+        Self-Balancing Motorcycle
+      </h3>
+      <!-- Description -->
+      <div class="relative overflow-hidden">
+        <!-- Hidden Expandable Text -->
+        <div class="extra-text hidden text-gray-300 text-sm leading-relaxed mb-3 whitespace-normal break-words max-w-full overflow-hidden">
+          The design and fabrication of a rapid prototype for a self-balancing motorcycle involve multiple stages, including the determination of design requirements, mechanical and electronic system design, prototype fabrication, and testing to ensure performance standards are met. The mechanical design consists of the frame, suspension, wheels, 
+          and steering system, while the electronic design integrates control systems, sensors, and motors. Fabrication techniques such as 3D printing, CNC machining, and welding are employed to manufacture the components. These components are assembled to form the prototype, which can then be used for 
+          further development and optimization toward a fully functional self-balancing motorcycle
+        </div>
+      </div>
+      <!-- Button -->
+      <button class="read-more text-green-400 text-sm font-semibold hover:underline focus:outline-none mb-4">
+        Read More...
+      </button>
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 text-xs text-green-400">
+        <span class="bg-green-400/10 px-2 py-1 rounded">Self-balancing mechanism</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Gyroscope</span>
+        <span class="bg-green-400/10 px-2 py-1 rounded">Sensor</span>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  <!-- EXPLORE MORE BUTTON -->
+  <div class="mt-16 text-center">
+    <a href="Project.html"
+       class="inline-block bg-green-600 text-white text-lg font-semibold px-10 py-4 rounded-full shadow-lg 
+       hover:bg-green-700 hover:shadow-green-400/50 transition-all duration-300">
+      Explore More
+    </a>
+  </div>
+<br>
+</section>
+
+<!-- featured 
+<section id="featured" class="bg-gray-900 py-16 text-white">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-green-400 mb-8">FEATURED PRODUCTS</h2>
+    <p class="text-gray-300 mb-12">Visit our shop to see amazing creations from our Projects.</p>
+
+ 
+    <div class="flex justify-center mb-10 space-x-6">
+      <button id="tab-deep" class="tab-btn text-green-400 border-b-2 border-green-400 pb-1">DEEP LEARNING</button>
+      <button id="tab-ml" class="tab-btn text-gray-400 hover:text-green-400 pb-1">MACHINE LEARNING</button>
+    </div>
+
+
+    <div class="relative">
+      <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-600 shadow-lg z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div id="carousel" class="flex space-x-6 overflow-x-auto scroll-smooth pb-4 px-12 no-scrollbar">
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep1.png" alt="Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Efficient Firearms Monitoring Technique for Smart Cities</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep2.png" alt="Project 2" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Lightweight Model for Ship Localizations in SAR Images</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep3.png" alt="Project 3" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Lightweight Robust Deep Learning Model for Diabetic Retinopathy Classification</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep4.png" alt="Project 4" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Novel Transformer Model with Multiple Instance Learning for Retinopathy Detection</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, AI, Deep Learning</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep1.png" alt="Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Efficient Firearms Monitoring Technique for Smart Cities</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="deep-card min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="deep1.png" alt="Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">A Deep Learning–Based Efficient Firearms Monitoring Technique for Smart Cities</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Deep Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,500.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml1.png" alt="ML Project 1" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Machine Learning Based Air Quality Prediction System</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Projects</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml2.png" alt="ML Project 2" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Crop Yield Prediction Using Machine Learning</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Agriculture</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml3.png" alt="ML Project 3" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Customer Churn Prediction for Telecom Industry</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning, Data Analysis</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+
+        <div class="ml-card hidden min-w-[280px] bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2">
+          <img src="ml4.png" alt="ML Project 4" class="w-full h-44 object-contain bg-white" />
+          <div class="p-4 text-left">
+            <h3 class="text-lg font-semibold mb-2">Energy Consumption Forecasting Using Regression Models</h3>
+            <p class="text-sm text-gray-400 mb-3">Python, Machine Learning</p>
+            <p class="text-green-400 font-bold">₹5,000.00</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-green-600 shadow-lg z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+    <div class="mt-12">
+  <a href="Project.html"
+     class="inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-green-700 hover:shadow-green-500/40 transition-all duration-300">
+    Explore More
+  </a>
+</div>
+  </div>
+</section> -->
+
+<!-- Contact Section -->
+<section id="contact-form" class="py-16 bg-gray-100 fade-in">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+    <!-- LEFT SIDE: Info + Map + Social Media -->
+    <div>
+      <h2 class="text-4xl font-bold text-green-600 mb-6">Get in Touch</h2>
+      <p class="text-gray-600 mb-6">
+        Have questions? Fill out the form and we'll get back to you as soon as possible.
+      </p>
+
+      <!-- 📍 Location Info -->
+      <div class="mb-10">
+        <h3 class="text-2xl font-semibold text-green-600 mb-2">Our Location</h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          <strong>Netgene Technologies Pvt. Ltd.</strong><br>
+          14 Mount Poonamallee Road, Porur <br>
+          Chennai, Tamil Nadu, 600116, India.
+        </p>
+
+        <!-- Title Above Map -->
+        <p class="text-lg font-semibold text-green-700 mb-3">
+          Netgene Technologies
+        </p>
+
+        <!-- Embedded Google Map (coordinates: 13°02'06.1"N 80°09'17.4"E) --> 
+         <div class="overflow-hidden rounded-xl shadow-md border border-gray-300"> 
+          <iframe src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"> 
+          </iframe> 
+        </div> 
+      </div>
+
+      <!-- 🌐 Social Media Icons -->
+
+
+<div>
+  <h3 class="text-2xl font-semibold text-green-600 mb-4">Connect with Us</h3>
+
+  <div class="flex space-x-4">
+
+    <a href="https://facebook.com/yourpage"
+      class="text-gray hover:text-[#1877F2] text-3xl transition"
+      target="_blank">
+      <i class='bx bxl-facebook-circle'></i>
+    </a>
+
+    <!-- Instagram (White → Gradient on Hover) -->
+    <a href="https://instagram.com/yourpage"
+       class="instagram-gradient-hover text-3xl text-gray transition"
+       target="_blank">
+      <i class='bx bxl-instagram'></i>
+    </a>
+
+    <!-- LinkedIn (White → Blue) -->
+    <a href="https://linkedin.com/in/yourprofile"
+       class="text-gray hover:text-blue-600 text-3xl transition"
+       target="_blank">
+      <i class='bx bxl-linkedin-square'></i>
+    </a>
+
+    <!-- Twitter (White → Sky Blue) -->
+    <a href="https://x.com/yourprofile"
+       class="text-gray hover:text-blue-400 text-3xl transition"
+       target="_blank">
+      <i class='bx bxl-twitter'></i>
+    </a>
+
+    <!-- Phone (White → Green) -->
+    <a href="tel:+919500126711"
+       class="text-gray hover:text-green-500 text-3xl transition">
+      <i class='bx bxs-phone-call'></i>
+    </a>
+
+    <!-- WhatsApp (White → WhatsApp Green) -->
+    <a href="https://wa.me/919500126711"
+       class="text-gray hover:text-green-600 text-3xl transition"
+       target="_blank">
+      <i class='bx bxl-whatsapp'></i>
+    </a>
+
+  </div>
+</div>
+    </div>
+
+
+    <!-- RIGHT SIDE: Contact Form -->
+    <form name="contact" method="POST" data-netlify="true"
+      class="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-200">
+
+      <input type="hidden" name="form-name" value="contact" />
+
+      <!-- Name -->
+      <div class="mb-4">
+        <input
+          type="text"
+          name="Full_Name"
+          placeholder="Full Name"
+          required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"
+        >
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <input
+          type="email"
+          name="Email_Address"
+          placeholder="Email Address"
+          required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"
+        >
+      </div>
+
+      <!-- Message -->
+      <div class="mb-4">
+        <textarea
+          name="Message"
+          rows="6"
+          placeholder="Your Message"
+          required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-600"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition"
+      >
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-6">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+
+    <p class="text-sm text-gray-300 text-center md:text-left">
+      © 2025 Netgene Technologies.All Rights Reserved.
+    </p>
+
+    <a href="#home"
+      class="mt-4 md:mt-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-500 hover:bg-green-600 transition shadow-lg">
+      <i class='bx bx-up-arrow-alt text-xl'></i>
+    </a>
+
+  </div>
+</footer>
+
+  <!-- ✅ Load your script -->
+  <script src="script.js"></script>
+<script>
+  // Toggle Read More / Show Less
+  document.querySelectorAll(".read-more").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".w-96");
+      const extraText = card.querySelector(".extra-text");
+
+      if (extraText.classList.contains("hidden")) {
+        extraText.classList.remove("hidden");
+        button.textContent = "Show Less...";
+      } else {
+        extraText.classList.add("hidden");
+        button.textContent = "Read More...";
+      }
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll(".read-more").forEach((button) => {
+    button.addEventListener("click", () => {
+      const extraText = button.previousElementSibling.querySelector(".extra-text");
+
+      // Toggle hidden text
+      extraText.classList.toggle("hidden");
+
+      // Change button text
+      if (extraText.classList.contains("hidden")) {
+        button.textContent = "Read More...";
+      } else {
+        button.textContent = "Read Less";
+      }
+    });
+  });
+</script>
+</body>
+</html>
+</html>

@@ -1,0 +1,280 @@
+/* Smooth Scroll */
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------- */
+/* NAVBAR STYLES */
+/* ---------------------- */
+#navbar {
+  background: rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------- */
+/* SECTION FADE-IN EFFECT */
+/* ---------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------- */
+/* HERO IMAGE / VIDEO */
+/* ---------------------- */
+.hero-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes it fill the screen */
+  z-index: -1; /* Places it behind content */
+}
+/* Hero text styling */
+#home h1, 
+#home p {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------------------- */
+/* CONTACT SECTION */
+/* ---------------------- */
+.Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.Contact .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Contact input[type="text"],
+.Contact input[type="email"],
+.Contact input[type="number"],
+.Contact input[type="submit"],
+.Contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.Contact textarea {
+  resize: vertical;
+}
+
+.Contact input[type="submit"] {
+  background-color: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.Contact input[type="submit"]:hover {
+  background-color: #15803d;
+}
+
+.Contact .heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Contact .heading span {
+  color: #16a34a;
+}
+
+.instagram-gradient-hover:hover i {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.Contact input::placeholder,
+.Contact textarea::placeholder {
+  color: #888;
+}
+
+.whatsapp-glow {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(16, 185, 129, 0.6); }
+  50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.9); }
+  100% { box-shadow: 0 0 0px rgba(16, 185, 129, 0.6); }
+} 
+
+/* ---------------------- */
+/* FOOTER */
+/* ---------------------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: #0f172a;
+  color: #fff;
+}
+
+.footer-text p {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: #16a34a;
+  border-radius: 0.8rem;
+  transition: 0.4s ease;
+}
+
+.footer-iconTop a:hover {
+  box-shadow: 0 0 10px #16a34a;
+}
+
+.footer-iconTop a i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* ---------------------- */
+/* MOBILE MENU */
+/* ---------------------- */
+@media (max-width: 768px) {
+
+  /* Full-screen overlay menu */
+  #nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    transition: right 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 998;
+  }
+
+  /* When opened */
+  #nav-links.open {
+    right: 0;
+    opacity: 1;
+  }
+
+  #nav-links a {
+    color: white;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    transition: 0.3s ease;
+  }
+
+  #nav-links a:hover {
+    color: #22c55e;
+    transform: scale(1.1);
+  }
+
+  /* Hamburger lines */
+  .menu-line {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate hamburger into X */
+  #menu-btn.active .menu-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  #menu-btn.active .menu-line:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-btn.active .menu-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+/* ---------------------- */
+/* MARQUEE EFFECT */
+/* ---------------------- */
+.marquee-left, 
+.marquee-right {
+  display: inline-flex;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.marquee-left {
+  animation-name: marquee-left;
+  animation-duration: 40s;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-right {
+  animation-name: marquee-right;
+  animation-duration: 40s;
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.marquee-left:hover, 
+.marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* ---------------------- */
+/* SCROLLBAR HIDE */
+/* ---------------------- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Techno Solutions | Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    :root {
+      --green: #000000;
+      --green-dark: #80d440;
+      --dark: #222;
+      --muted: #666;
+      --light: #f9fafb;
+      --border: #e5e7eb;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TOPBAR ---------- */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--green);
+      color: white;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .topbar img {
+      height: 45px;
+      width: auto;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.4rem;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--green-dark);
+    }
+
+    .social1-icons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social1-icons a {
+      color: white;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social1-icons a:hover {
+      color: var(--green-dark);
+    }
+
+    .topbar-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .topbar-right {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: var(--green);
+        padding: 10px 0;
+        text-align: center;
+      }
+      .topbar-right.active {
+        display: flex;
+      }
+      .topbar-toggle {
+        display: block;
+        color: white;
+      }
+    }
+
+    /* ---------- FIXED CATEGORY STYLING ---------- */
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .category-item {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 9999px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .category-item:hover {
+      background: var(--green-dark);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 640px) {
+      .category-item {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <img src="image\Netgene_logo_1.png" alt="Netgene Technologies Logo" />
+    <div class="topbar-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <div class="topbar-right" id="menuContent">
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+      </div>
+      <div class="social1-icons">
+        <div><a href="index.html">HOME</a></div>
+        <div><a href="tel:+919500126711">+91 95001 26711</a></div>
+        <div><a href="#footer">CONTACT US</a></div>
+        <div><a href="#">FAQS</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gray-900 text-white">
+    <img src="image/shop.jpg" class="w-full h-80 object-cover opacity-60 mx-auto">
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+      <h2 class="text-5xl font-bold mb-4">Shop</h2>
+      <p class="text-lg">Explore Our Latest Final Year Projects</p>
+    </div>
+  </section>
+
+  <br> <br> <br>
+
+  <!-- Fixed Categories Section -->
+<div class="category-grid">
+  <div class="category-item" data-category="all">All</div>
+  <div class="category-item" data-category="automobile">Automobile Engineering</div>
+  <div class="category-item" data-category="pneumatic">Pneumatic Systems</div>
+  <div class="category-item" data-category="environmental">Environmental & Sustainability</div>
+  <div class="category-item" data-category="manufacturing">Manufacturing & Automation</div>
+  <div class="category-item" data-category="renewable">Renewable Energy & Innovation</div>
+</div>
+
+  <!-- Products Section -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+  <div id="productGrid" class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 transition-all">
+
+    <!-- Automobile Category -->
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="automobile">
+      <img src="Project\Self Balancing Motocycle.jpg" alt="Self Balancing Motorcycle" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Self-Balancing Motorcycle</h3>
+        <p class="text-sm text-gray-600 mb-3">Gyroscope, Self-Balancing, Sensor</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,500.00</p>
+        <a href="1 Self-Balancing Motorcycle.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="automobile">
+      <img src="Project\air engine.jpeg" alt="Air Engine" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Air Engine</h3>
+        <p class="text-sm text-gray-600 mb-3">Compressed Air, Renewable, Non-Combustion</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,500.00</p>
+        <a href="2 Design and Fabrication of Air Engine.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="automobile">
+      <img src="Project\Cruise control main.jpg" alt="Cruise Control Lever" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Cruise Control Lever</h3>
+        <p class="text-sm text-gray-600 mb-3">Speed Control, Automotive Engineering</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,500.00</p>
+        <a href="3 Design and Fabrication of Cruise Control Lever in Automobiles.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="automobile">
+      <img src="Project\Parallel parking  with Wiper Motor.jpeg" alt="Parallel Parking System" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Parallel Parking System</h3>
+        <p class="text-sm text-gray-600 mb-3">Autonomous Maneuver, Collision Avoidance</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,500.00</p>
+        <a href="4 Design and Fabrication of Parallel Parking System.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="pneumatic">
+      <img src="Project\Pneumatic Hand Brake Release.jpeg" alt="Pneumatic Automatic Hand Brake" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Pneumatic Automatic Hand Brake Release</h3>
+        <p class="text-sm text-gray-600 mb-3">Pneumatics, Safety System, Automation</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,000.00</p>
+        <a href="5 Design and Fabrication of Pneumatic Automatic Hand Brake Release.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <!-- Pneumatic Systems -->
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="pneumatic">
+      <img src="Project\PNEUMATIC JACK.png" alt="Pneumatic Jack" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Pneumatic Jack</h3>
+        <p class="text-sm text-gray-600 mb-3">Compressed Air, Lifting Mechanism</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹4,800.00</p>
+        <a href="6 Design and Fabrication of Pneumatic Jack.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="pneumatic">
+      <img src="Project\Pneumatic Vice.jpeg" alt="Pneumatic Vice" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Pneumatic Vice</h3>
+        <p class="text-sm text-gray-600 mb-3">Clamping, Machining, Automation</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,200.00</p>
+        <a href="7 Design and Fabrication of Pneumatic Vice.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <!-- Environmental -->
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="environmental">
+      <img src="Project\River Cleaning Robot - With Plastic Detector.jpeg" alt="Floating Garbage Cleaning System" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Floating Garbage Cleaning System</h3>
+        <p class="text-sm text-gray-600 mb-3">Water Pollution, Waste Collection</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹6,000.00</p>
+        <a href="8 Design and Fabrication of Floating Garbage Cleaning System.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <!-- Manufacturing -->
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="manufacturing">
+      <img src="Project\Stamping Machine Without Sensor.jpeg" alt="Stamping Machine" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Design and Fabrication of Stamping Machine</h3>
+        <p class="text-sm text-gray-600 mb-3">Industrial Automation, Small-Scale Manufacturing</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,300.00</p>
+        <a href="9 Design and Fabrication of Stamping Machine.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+    <!-- Renewable Energy -->
+    <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-lime-400 transition" data-category="renewable">
+      <img src="Project\Timed speed breaker power generation.jpeg" alt="Speed Breaker Power Generation" class="w-full h-56 object-contain bg-gray-100">
+      <div class="p-5 text-center">
+        <h3 class="text-lg font-semibold mb-2">Timed Speed Breaker Power Generation System</h3>
+        <p class="text-sm text-gray-600 mb-3">Renewable Energy, Flywheel Mechanism</p>
+        <p class="text-lime-600 font-bold text-lg mb-3">₹5,800.00</p>
+        <a href="10 Design and Fabrication of Timed Speed Breaker Power Generation System.html"><button class="bg-lime-600 text-white px-5 py-2 rounded-lg hover:bg-lime-700">Explore More</button></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 px-6">
+      <div>
+        <h3 class="text-white font-bold mb-3">Netgene Technologies</h3>
+        <p>Netgene Technologies was founded by a team of young engineering innovators with a mission to empower 
+          students by delivering smart, reliable, and industry-ready project solutions.</p>
+        <p class="mt-3">📞 +91 95001 26711/p>
+        <p>✉️ netgenetechnologies@gmail.com</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3">Our Category</h4>
+        <ul class="space-y-2">
+          <li>Java</li>
+          <li>Python</li>
+          <li>Embedded</li>
+          <li>Matlab</li>
+          <li>Mechanical</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3">Useful Links</h4>
+        <ul class="space-y-2">
+          <li>Privacy Policy</li>
+          <li>Returns</li>
+          <li>Terms & Conditions</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-3">Location</h4>
+        <iframe src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS for Toggle Menu -->
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menuContent = document.getElementById("menuContent");
+    menuToggle.addEventListener("click", () => {
+      menuContent.classList.toggle("active");
+    });
+
+      const categoryItems = document.querySelectorAll('.category-item');
+  const products = document.querySelectorAll('.product-card');
+
+  categoryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove active state from all
+      categoryItems.forEach(cat => cat.classList.remove('active-category'));
+      // Add active to clicked
+      item.classList.add('active-category');
+
+      const category = item.getAttribute('data-category');
+
+      products.forEach(product => {
+        if (category === 'all' || product.getAttribute('data-category') === category) {
+          product.style.display = 'block';
+          product.classList.add('fade-in');
+        } else {
+          product.style.display = 'none';
+          product.classList.remove('fade-in');
+        }
+      });
+    });
+  });
+  </script>
+
+</body>
+</html>

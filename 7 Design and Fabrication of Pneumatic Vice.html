@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design and Fabrication of Pneumatic Vice | Netgene Technologies</title>
+
+  <!-- ✅ Boxicons CDN (for social icons) -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    :root {
+      --green: #000000;
+      --green-dark: #000000;
+      --dark: #000000;
+      --muted: #666;
+      --light: #f9fafb;
+      --border: #e5e7eb;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fff;
+      color: #000000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ======= ATTRACTIVE & RESPONSIVE TOPBAR ======= */
+    .topbar {
+      background: linear-gradient(90deg, #000000 0%, #000000 100%); 
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .topbar-left {
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .topbar-right div {
+      display: flex;
+      align-items: center;
+      border-left: 1px solid rgba(255,255,255,0.3);
+      padding: 0 12px;
+    }
+
+    .topbar-right div:first-child {
+      border-left: none;
+    }
+
+    .topbar-right a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .topbar-right a:hover {
+      opacity: 0.9;
+    }
+
+    .social-icons a {
+      font-size: 25px;
+      margin: 0 2px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: rgb(69, 219, 79);
+      transform: scale(1.15);
+    }
+
+    .social1-icons a {
+      font-size: 16px;
+      margin: 0 2px;
+      transition: transform 0.3s ease;
+    }
+
+    .social1-icons a:hover {
+      color: #16a34a;
+      transform: scale(1.15);
+    }
+
+    /* ======= MOBILE MENU ======= */
+    .topbar-toggle {
+      display: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .topbar-menu {
+      display: none;
+      flex-direction: column;
+      background: #5a9031;
+      width: 100%;
+      text-align: center;
+    }
+
+    .topbar-menu a {
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ======= PRODUCT SECTION ======= */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .product-image {
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .product-image:hover {
+      transform: scale(1.02);
+    }
+
+    .product-image img {
+      max-width: 100%;
+      height: 350px;
+      border-radius: 4px;
+    }
+
+    .product-details h1 {
+      font-size: 26px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .product-price {
+      font-size: 22px;
+      color: #5a9031;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      background: var(--green);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background: var(#5a9031);
+      transform: translateY(-2px);
+    }
+
+    .product-meta {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+
+    .product-meta a {
+      color: #555;
+      text-decoration: none;
+      margin-left: 8px;
+      font-size: 22px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .product-meta a:hover {
+      color: #16a34a; /* Tailwind green-600 equivalent */
+      transform: scale(1.15);
+    }
+
+    .tabs {
+      margin-top: 50px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tab-list {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      flex-wrap: wrap;
+    }
+
+    .tab-list button {
+      background: transparent;
+      border: none;
+      padding: 14px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--dark);
+      transition: 0.3s ease;
+    }
+
+    .tab-list button.active {
+      color: #16a34a;
+      border-bottom: 3px solid var(--green);
+    }
+
+    .tab-panel {
+      padding: 30px;
+      color: var(--muted);
+    }
+
+    .tab-panel h3 {
+      color: #46b16d;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .tab-panel p {
+      margin-top: 8px;
+      font-size: 15px;
+      color: var(--dark);
+    }
+
+    .footer {
+      background: #0f1624;
+      color: #fff;
+      padding: 60px 20px;
+      margin-top: 80px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .footer-column p,
+    .footer-column ul li {
+      color: #d0d0d0;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column a {
+      color: #d0d0d0;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-column a:hover {
+      color: #00ffaa;
+    }
+
+    .footer-contact i {
+      color: #ff6ec7;
+      margin-right: 6px;
+    }
+
+    /* RESPONSIVE FOOTER */
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/a2d9d5e76b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Responsive Topbar -->
+  <div class="topbar">
+
+    <img src="image\Netgene_logo_1.png"  alt="Netgene Technologies Logo" />
+    <div class="topbar-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <div class="topbar-right">
+      <div class="social-icons">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+      </div>
+      <div class="social1-icons">
+         <!--<div><a href="#">NEWSLETTER</a></div>-->
+        <div><a href="tel:+919500126711">+91 95001 26711</a></div>
+        <div><a href="#">CONTACT US</a></div>
+        <div><a href="#">FAQS</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Section -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="Project.html">Projects</a> / 
+      <strong>Design and Fabrication of Pneumatic Vice</strong>
+    </div>
+
+    <section class="product-section">
+      <div class="product-image">
+        <img src="Project\Pneumatic Vice.jpeg" alt="Design and Fabrication of Pneumatic Vice">
+      </div>
+
+      <div class="product-details">
+        <h1>Design and Fabrication of Pneumatic Vice</h1>
+        <div class="product-price">₹5,500.00</div>
+
+        <div class="product-meta">
+          <div><strong>SKU:</strong> MECH-SBM-001</div>
+          <div><strong>Category:</strong> Mechanical Engineering, Robotics</div>
+          <div class="tags"><strong>Tags:</strong> Gyroscope, Self-Balancing, Sensor</div>
+
+          <div style="margin-top: 10px;">
+            <strong>Share:</strong>
+            <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://x.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <div class="tab-list">
+        <button class="active" data-tab="desc">ABSTRACT</button>
+        <button data-tab="reviews">REVIEWS (0)</button>
+        <button data-tab="abstract">DOWNLOAD ABSTRACT</button>
+      </div>
+
+<div class="tab-panel" id="desc">
+
+  <h3>Overview</h3>
+  <p>
+    A vice is a fundamental mechanical device used to hold workpieces securely during machining 
+    operations such as drilling, milling, cutting, or sawing. This project focuses on designing 
+    and fabricating a pneumatic vice that uses compressed air to provide fast, efficient, and 
+    consistent clamping. By automating the clamping process, the system enhances ease of use, 
+    precision, and overall machining productivity.
+  </p>
+
+  <h3>Concept</h3>
+  <p>
+    The pneumatic vice operates using a cylinder powered by compressed air. When air pressure is 
+    applied, the piston moves to clamp the workpiece firmly, ensuring consistent force and stability. 
+    Releasing the air pressure quickly disengages the clamp. This eliminates manual tightening, 
+    reduces time, and delivers uniform clamping pressure, making it ideal for repetitive machining tasks.
+  </p>
+
+  <h3>Why Pneumatic Vice?</h3>
+  <p>
+    • Faster clamping compared to manual vices <br>
+    • Provides uniform and consistent pressure <br>
+    • Reduces operator fatigue and manual effort <br>
+    • Enhances machining accuracy and productivity <br>
+    • Simple operation and easy integration into workshops
+  </p>
+
+  <h3>Applications</h3>
+  <p>
+    • CNC and manual machining <br>
+    • Workshops and fabrication units <br>
+    • Production and assembly lines <br>
+    • Educational and training setups
+  </p>
+
+  <h3>Keywords:</h3>
+  <p>Pneumatic vice, Automation, Clamping, Machining</p>
+
+</div>
+
+<!-- NEW PANEL: REVIEWS -->
+      <div class="tab-panel" id="reviews">
+        <h3>Reviews</h3>
+        <p>No reviews yet.</p>
+      </div>
+
+      <!-- NEW PANEL: DOWNLOAD ABSTRACT -->
+      <div class="tab-panel" id="abstract">
+        <h3>Download Abstract</h3>
+        <br>
+        <a href="need to put pdf path here" download
+          style="background:black;color:white;padding:10px 18px;border-radius:6px;text-decoration:none;">
+          ⬇ Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Company Info -->
+      <div class="footer-column">
+        <h3>Netgene Technologies</h3>
+        <p>
+          Netgene Technologies was started by young engineering graduates to help
+          students overcome academic project challenges by providing innovative
+          solutions.
+        </p>
+
+        <p class="footer-contact">
+          <i class='bx bxs-phone'></i> +91 95001 26711 <br>
+          <i class='bx bxs-envelope'></i> netgenetechnologies@gmail.com
+        </p>
+      </div>
+
+      <!-- Category -->
+      <div class="footer-column">
+        <h3>Our Category</h3>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Embedded</li>
+          <li>Matlab</li>
+          <li>Mechanical</li>
+        </ul>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Location -->
+      <div class="footer-column">
+        <h3>Location</h3>
+        <iframe
+          src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed"
+          width="100%" height="160" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </footer>
+
+<script>
+  // TAB SWITCHING
+  const tabs = document.querySelectorAll(".tab-list button");
+  const panels = document.querySelectorAll(".tab-panel");
+
+  // Hide all panels except first
+  panels.forEach((p, i) => {
+    p.style.display = i === 0 ? "block" : "none";
+  });
+
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      btn.classList.add("active");
+
+      panels.forEach(panel => {
+        panel.style.display =
+          (panel.id === btn.dataset.tab) ? "block" : "none";
+      });
+    });
+  });
+</script>
+</body>
+</html>

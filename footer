@@ -1,0 +1,135 @@
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+/* Footer Section */
+.footer{
+  background: #05291b;
+  color: #fff;
+  padding: 50px 8%;
+  font-size: 14px;
+}
+
+.footer-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column{
+  flex: 1 1 220px;
+}
+
+.footer-column h3{
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #00ff99;
+}
+
+.footer-column p{
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-column ul{
+  list-style: none;
+}
+
+.footer-column ul li{
+  margin: 6px 0;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.footer-column ul li:hover{
+  color: #00ff99;
+  transform: translateX(5px);
+}
+
+.footer-column ul li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover{
+  color: #00ff99;
+}
+
+.footer-contact i{
+  color: #00ff99;
+  margin-right: 5px;
+}
+
+/* Copyright */
+.footer-bottom{
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #0a3c2a;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+/* Mobile Responsive */
+@media (max-width:600px){
+  .footer-container{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3>Netgene Technologies</h3>
+      <p>Netgene Technologies was started by young engineering graduates to help students overcome academic project challenges by providing innovative solutions.</p>
+
+      <p class="footer-contact">
+        <i class='bx bxs-phone'></i> +91 95001 26711 <br>
+        <i class='bx bxs-envelope'></i> netgenetechnologies@gmail.com
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Our Category</h3>
+      <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Embedded</li>
+        <li>Matlab</li>
+        <li>Mechanical</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Location</h3>
+      <iframe src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed" width="100%" height="160" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Netgene Technologies. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+

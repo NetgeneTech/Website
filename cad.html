@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CAD, CAM & CAE Training</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+    body{ background:#ffffff; color:#083021; line-height:1.6; }
+
+    /* Hero Section */
+    .hero{ text-align:center; padding:120px 20px; background:linear-gradient(to right,#00b36b,#008454); color:#fff; }
+    .hero h1{ font-size:3rem; font-weight:600; }
+    .hero p{ margin:15px 0; font-size:1.1rem; font-weight:300; max-width:900px; margin-left:auto; margin-right:auto; }
+    .cta{ margin-top:10px; padding:12px 28px; background:#00ff99; border:none; border-radius:45px; font-size:1rem; cursor:pointer; font-weight:600; color:#083021; transition:.3s; }
+    .cta:hover{ transform:scale(1.06); background:#00d07f; }
+
+    /* Content */
+    .content, .services, .contact{ padding:70px 12%; text-align:center; }
+    .content h2, .services h2, .contact h2{ font-size:2rem; color:#008454; margin-bottom:25px; }
+
+    /* Grid */
+    .service-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px; margin-top:20px; text-align:left; }
+    .service-box{ opacity:0; transform:translateY(20px); background:#d9fff0; border:2px solid #00b36b; border-radius:12px; padding:20px; transition:.3s; }
+    .service-box:hover{ transform:translateY(-6px); box-shadow:0 6px 16px rgba(0,0,0,0.12); background:#b5ffe2; }
+    .service-box h3{ color:#00663d; margin-bottom:10px; }
+    .service-box p{ font-size:0.95rem; color:#083021; line-height:1.45; }
+
+    /* Tools list */
+    .tools{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:14px; }
+    .tool{ background:#fff; border:1px solid #00b36b; padding:8px 12px; border-radius:999px; font-weight:600; color:#00663d; font-size:0.9rem; }
+
+    /* Highlights */
+    .highlights{ display:flex; gap:18px; justify-content:center; margin-top:28px; flex-wrap:wrap; }
+    .highlight{ background:#fff; border:2px solid #00b36b; padding:18px 22px; border-radius:12px; min-width:160px; box-shadow:0 4px 12px rgba(0,0,0,0.06); text-align:center; }
+    .highlight h3{ margin:0; color:#00663d; font-size:1.6rem; }
+    .highlight p{ margin:6px 0 0 0; color:#083021; font-size:0.95rem; }
+
+    /* Footer Section */
+    .footer{ background:#05291b; color:#fff; padding:50px 8%; font-size:14px; }
+    .footer-container{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; }
+    .footer-column{ flex:1 1 220px; }
+    .footer-column h3{ margin-bottom:15px; font-size:18px; color:#00ff99; }
+    .footer-column p{ margin-bottom:10px; line-height:1.6; }
+    .footer-column ul{ list-style:none; padding-left:0; }
+    .footer-column ul li{ margin:6px 0; cursor:pointer; transition:.3s; }
+    .footer-column ul li:hover{ color:#00ff99; transform:translateX(5px); }
+    .footer-column ul li a{ color:#fff; text-decoration:none; }
+    .footer-column ul li a:hover{ color:#00ff99; }
+    .footer-contact i{ color:#00ff99; margin-right:5px; }
+
+    /* Copyright */
+    .footer-bottom{ text-align:center; margin-top:30px; border-top:1px solid #0a3c2a; padding-top:10px; font-size:13px; }
+
+    /* Fade Animation */
+    .fade-in{ opacity:0; animation:fadeIn 1s forwards; }
+    .delay{ animation-delay:.5s; }
+    .delay2{ animation-delay:1s; }
+    @keyframes fadeIn{ to{ opacity:1; } }
+
+    /* Responsive */
+    @media (max-width:1000px){ .service-grid{ grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:600px){
+      .hero h1{ font-size:2.2rem; }
+      .service-grid{ grid-template-columns: 1fr; }
+      .footer-container{ flex-direction:column; }
+      .highlights{ flex-direction:column; align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" style="
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('CADCAMCAE.jpg') center/cover no-repeat;
+  ">
+    <h1 class="fade-in">CAD • CAM • CAE Training Programs</h1>
+    <p class="fade-in delay">
+      Practical training in design, manufacturing, and simulation — industry-standard tools, live projects, CNC programming, and certification.
+      Ideal for mechanical, aerospace, automotive, and manufacturing aspirants.
+    </p>
+    <button class="cta fade-in delay2">Enquire Now</button>
+  </section>
+
+  <!-- About -->
+  <section class="content">
+    <h2>Why CAD / CAM / CAE Training?</h2>
+    <p>
+      Our CAD/CAM/CAE courses bridge theory and practice: learn to create manufacturable designs, generate CNC toolpaths, and validate performance with simulations.
+      Trainers are industry professionals and sessions include hands-on labs, real projects, and placement/internship support.
+    </p>
+
+    <!-- Tools -->
+    <div class="tools" aria-hidden="false">
+      <div class="tool">SolidWorks</div>
+      <div class="tool">CATIA</div>
+      <div class="tool">AutoCAD</div>
+      <div class="tool">Fusion 360</div>
+      <div class="tool">Mastercam</div>
+      <div class="tool">NX CAM</div>
+      <div class="tool">ANSYS</div>
+      <div class="tool">Abaqus</div>
+      <div class="tool">HyperWorks</div>
+      <div class="tool">CNC Simulation</div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Course Modules / What We Cover</h2>
+
+    <div class="service-grid">
+      <div class="service-box">
+        <h3>CAD — 2D & 3D Modelling</h3>
+        <p>Parametric modelling, assemblies, sheet metal, surface modelling, drawings and drafting using SolidWorks, CATIA & AutoCAD.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>CAM — CNC Programming</h3>
+        <p>Toolpath generation, post-processing, 2.5D & 3D milling, turning, multi-axis basics, G-code understanding and CNC simulation using Mastercam / Fusion CAM.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>CAE — FEA & Simulation</h3>
+        <p>Structural analysis, thermal, modal, optimization, meshing strategies, result interpretation using ANSYS / Abaqus and design validation workflows.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Design for Manufacturing (DFM)</h3>
+        <p>Manufacturability checks, tolerance analysis, assembly constraints, cost-effective design choices and rapid prototyping considerations.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Reverse Engineering & Scanning</h3>
+        <p>Point cloud processing, reverse modelling workflows and converting scanned data into CAD-ready parts for refurbishment or redesign.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>3D Printing & Prototyping</h3>
+        <p>FDM/SLA printing fundamentals, slicing best practices, post-processing, and creating prints directly from CAD models for validation.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Project-Based Learning</h3>
+        <p>End-to-end mini projects: design, simulate, manufacture (CNC/3D print), test and document — portfolio-ready deliverables for students.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Industry Tools & Workflows</h3>
+        <p>Version control for CAD, PDM basics, collaboration workflows, BOM generation and integration with CAM/CAE pipelines.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Certification & Placement Support</h3>
+        <p>Course completion certificate, project certificate, mock interviews, and introductions to industry partners for internships and placements.</p>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="highlights" aria-hidden="false">
+      <div class="highlight">
+        <h3>40+</h3>
+        <p>Hours of Hands-on Labs</p>
+      </div>
+      <div class="highlight">
+        <h3>6</h3>
+        <p>Real-World Mini Projects</p>
+      </div>
+      <div class="highlight">
+        <h3>Industry</h3>
+        <p>Experienced Trainers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Enquiry -->
+  <section class="contact">
+    <h2>Enrollment Options</h2>
+    <p>
+      Short-term workshops (1–2 weeks), in-depth courses (4–8 weeks), and customized corporate training. Batch timings: weekdays / weekends / online.
+      Group discounts and college-collaboration packages available.
+    </p>
+
+    <div style="margin-top:20px;">
+      <button class="cta" onclick="window.location.href='mailto:netgenetechnologies@gmail.com?subject=CAD%20CAM%20CAE%20Course%20Enquiry'">Enquire & Apply</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>Netgene Technologies</h3>
+        <p>
+          Netgene Technologies — practical engineering training for students and professionals. We deliver project-oriented CAD, CAM & CAE courses to make you industry-ready.
+        </p>
+
+        <p class="footer-contact">
+          <i class='bx bxs-phone'></i> +91 95001 26711 <br>
+          <i class='bx bxs-envelope'></i> netgenetechnologies@gmail.com
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Category</h3>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">IT Solutions</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Internships</a></li>
+          <li><a href="#">Final Year Projects</a></li>
+          <li><a href="#">Placement</a></li>
+          <li><a href="#">CAD/CAM/CAE</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Course Syllabus</a></li>
+          <li><a href="#">Project Gallery</a></li>
+          <li><a href="#">Fees & Schedule</a></li>
+          <li><a href="#">Contact & Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Location</h3>
+        <iframe
+          src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed"
+          width="100%" height="160" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Netgene Technologies. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    // Scroll animation
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".service-box").forEach(box => {
+        const boxPos = box.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.2;
+        if (boxPos < screenPos) {
+          box.style.opacity = "1";
+          box.style.transform = "translateY(0)";
+          box.style.transition = ".6s ease-out";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

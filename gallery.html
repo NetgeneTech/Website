@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Netgene</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #052726, #021516 50%, #000000 100%);
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Slideshow images */
+    .slide-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    .slide-img.active {
+      opacity: 1;
+    }
+
+    /* Gallery card hover */
+    .gallery-card img {
+      transition: all 0.6s ease;
+    }
+    .gallery-card:hover img {
+      transform: scale(1.15);
+      filter: brightness(0.7);
+    }
+
+    /* Card animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s forwards;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Card container */
+    .gallery-card {
+      height: 260px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      transform-style: preserve-3d;
+      transition: transform 0.35s ease;
+      cursor: pointer;
+    }
+    .gallery-card:hover {
+      transform: scale(1.03) rotate3d(1, 1, 0, 5deg);
+    }
+
+    /* Glass effect */
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(0, 255, 180, 0.25);
+      transition: 0.35s;
+    }
+    .glass:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 18px rgba(0, 255, 180, 0.35);
+    }
+
+    /* Arrows for each slideshow */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      background: rgba(0, 0, 0, 0.45);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 2;
+    }
+    .arrow:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .arrow-left { left: 8px; }
+    .arrow-right { right: 8px; }
+
+    /* Caption overlay */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: 0.45s ease;
+    }
+    .gallery-card:hover .caption {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Lightbox */
+    #lightbox {
+      backdrop-filter: blur(12px);
+    }
+    #lightbox-img {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      max-height: 80vh;
+    }
+    #lightbox-img.fade {
+      opacity: 1;
+    }
+
+    /* Lightbox arrows */
+    .lb-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 38px;
+      transition: 0.3s;
+      z-index: 999;
+    }
+    .lb-arrow:hover {
+      background: rgba(0, 0, 0, 0.85);
+    }
+    .lb-left { left: 35px; }
+    .lb-right { right: 35px; }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="py-6 glass shadow-xl sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-green-400 fade-up">Netgene Gallery</h1>
+      <a href="index.html"
+        class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg shadow transition fade-up">
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <section
+    class="max-w-7xl mx-auto px-6 pb-20 pt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Template Card (repeat for each project) -->
+    <div class="glass p-3 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+      <div class="gallery-card slideshow fade-up">
+        <img src="intro-bg.jpg" class="slide-img active" data-desc="Opening Ceremony" />
+        <img src="4cde9be3286d7e6378273eb435f69a1f.jpg" class="slide-img" data-desc="Students interacting" />
+        <img src="68ee59eac5c82fe09691bd5d92abfb6a.jpg" class="slide-img" data-desc="Crowd visiting exhibition" />
+
+        <div class="arrow arrow-left"><i class="bx bx-chevron-left"></i></div>
+        <div class="arrow arrow-right"><i class="bx bx-chevron-right"></i></div>
+
+        <div class="caption">
+          <h3 class="text-sm font-semibold text-green-400">Exhibition</h3>
+          <i class="bx bx-search text-lg"></i>
+        </div>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 text-center leading-relaxed">
+        Through Netgene Technologies' full range of services, we create strong digital foundations.
+      </p>
+    </div>
+
+    <!-- Duplicate more cards -->
+    <div class="glass p-3 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+      <div class="gallery-card slideshow fade-up">
+        <img src="4cde9be3286d7e6378273eb435f69a1f.jpg" class="slide-img active" data-desc="Workshop Session" />
+        <img src="intro-bg.jpg" class="slide-img" data-desc="Opening Keynote" />
+        <img src="68ee59eac5c82fe09691bd5d92abfb6a.jpg" class="slide-img" data-desc="Audience Engagement" />
+
+        <div class="arrow arrow-left"><i class="bx bx-chevron-left"></i></div>
+        <div class="arrow arrow-right"><i class="bx bx-chevron-right"></i></div>
+
+        <div class="caption">
+          <h3 class="text-sm font-semibold text-green-400">Workshop</h3>
+          <i class="bx bx-search text-lg"></i>
+        </div>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 text-center leading-relaxed">
+        Empowering young engineers through hands-on learning and innovation.
+      </p>
+    </div>
+
+    <div class="glass p-3 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+      <div class="gallery-card slideshow fade-up">
+        <img src="68ee59eac5c82fe09691bd5d92abfb6a.jpg" class="slide-img active" data-desc="Award Ceremony" />
+        <img src="intro-bg.jpg" class="slide-img" data-desc="Event Lighting" />
+        <img src="4cde9be3286d7e6378273eb435f69a1f.jpg" class="slide-img" data-desc="Group Photo" />
+
+        <div class="arrow arrow-left"><i class="bx bx-chevron-left"></i></div>
+        <div class="arrow arrow-right"><i class="bx bx-chevron-right"></i></div>
+
+        <div class="caption">
+          <h3 class="text-sm font-semibold text-green-400">Award Night</h3>
+          <i class="bx bx-search text-lg"></i>
+        </div>
+      </div>
+      <p class="text-gray-300 text-sm mt-3 text-center leading-relaxed">
+        Celebrating achievements and creativity in every successful event.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-50 flex flex-col justify-center items-center">
+    <img id="lightbox-img" class="rounded-xl shadow-xl" />
+    <p id="lightbox-desc" class="mt-4 text-center text-gray-200 text-lg"></p>
+
+    <div id="lightbox-left" class="lb-arrow lb-left"><i class="bx bx-chevron-left"></i></div>
+    <div id="lightbox-right" class="lb-arrow lb-right"><i class="bx bx-chevron-right"></i></div>
+
+    <button id="closeBox" class="absolute top-6 right-6 text-white text-3xl">
+      <i class="bx bx-x"></i>
+    </button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const cards = document.querySelectorAll(".gallery-card");
+    const lightbox = document.getElementById("lightbox");
+    const lightImg = document.getElementById("lightbox-img");
+    const lightDesc = document.getElementById("lightbox-desc");
+    const closeBtn = document.getElementById("closeBox");
+    let currentImages = [];
+    let currentIndex = 0;
+
+    // Lightbox click
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        currentImages = [...card.querySelectorAll(".slide-img")].map(i => ({
+          src: i.src,
+          desc: i.dataset.desc
+        }));
+        currentIndex = Array.from(card.querySelectorAll(".slide-img")).findIndex(i => i.classList.contains("active"));
+        showInLightbox();
+        lightbox.classList.remove("hidden");
+      });
+    });
+
+    function showInLightbox() {
+      lightImg.classList.remove("fade");
+      setTimeout(() => {
+        lightImg.src = currentImages[currentIndex].src;
+        lightDesc.innerText = currentImages[currentIndex].desc;
+        lightImg.classList.add("fade");
+      }, 50);
+    }
+
+    document.getElementById("lightbox-left").onclick = () => {
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      showInLightbox();
+    };
+    document.getElementById("lightbox-right").onclick = () => {
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      showInLightbox();
+    };
+    closeBtn.addEventListener("click", () => lightbox.classList.add("hidden"));
+
+    // Slideshows per card
+    document.querySelectorAll(".slideshow").forEach(card => {
+      const slides = card.querySelectorAll(".slide-img");
+      let index = 0;
+
+      const showSlide = i => {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[i].classList.add("active");
+      };
+
+      // Auto rotation
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 2500);
+
+      // Arrows
+      const left = card.querySelector(".arrow-left");
+      const right = card.querySelector(".arrow-right");
+
+      left.addEventListener("click", e => {
+        e.stopPropagation();
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+      right.addEventListener("click", e => {
+        e.stopPropagation();
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+    });
+  </script>
+</body>
+</html>

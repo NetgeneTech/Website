@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Marketing Services</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+    body{ background:#ffffff; color:#083021; line-height:1.6; }
+
+    /* Hero Section */
+    .hero{ text-align:center; padding:120px 20px; background:linear-gradient(to right,#00b36b,#008454); color:#fff; }
+    .hero h1{ font-size:3rem; font-weight:600; }
+    .hero p{ margin:15px 0; font-size:1.1rem; font-weight:300; }
+    .cta{ margin-top:10px; padding:12px 28px; background:#00ff99; border:none; border-radius:45px; font-size:1rem; cursor:pointer; font-weight:600; color:#083021; transition:.3s; }
+    .cta:hover{ transform:scale(1.1); background:#00d07f; }
+
+    /* Content */
+    .content, .services, .contact{ padding:70px 12%; text-align:center; }
+    .content h2, .services h2, .contact h2{ font-size:2rem; color:#008454; margin-bottom:25px; }
+
+    /* Service Box */
+    .service-box{ opacity:0; transform:translateY(20px); background:#d9fff0; border:2px solid #00b36b; border-radius:12px; padding:20px; margin:15px 0; transition:.3s; }
+    .service-box:hover{ transform:translateY(-5px); box-shadow:0 4px 10px rgba(0,0,0,0.15); background:#b5ffe2; }
+    .service-box h3{ color:#00663d; margin-bottom:10px; }
+
+    /* Footer Section */
+    .footer{ background:#05291b; color:#fff; padding:50px 8%; font-size:14px; }
+    .footer-container{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; }
+    .footer-column{ flex:1 1 220px; }
+    .footer-column h3{ margin-bottom:15px; font-size:18px; color:#00ff99; }
+    .footer-column p{ margin-bottom:10px; line-height:1.6; }
+    .footer-column ul{ list-style:none; }
+    .footer-column ul li{ margin:6px 0; cursor:pointer; transition:.3s; }
+    .footer-column ul li:hover{ color:#00ff99; transform:translateX(5px); }
+    .footer-column ul li a{ color:#fff; text-decoration:none; }
+    .footer-column ul li a:hover{ color:#00ff99; }
+    .footer-contact i{ color:#00ff99; margin-right:5px; }
+
+    /* Copyright */
+    .footer-bottom{ text-align:center; margin-top:30px; border-top:1px solid #0a3c2a; padding-top:10px; font-size:13px; }
+
+    /* Fade Animation */
+    .fade-in{ opacity:0; animation:fadeIn 1s forwards; }
+    .delay{ animation-delay:.5s; }
+    .delay2{ animation-delay:1s; }
+    @keyframes fadeIn{ to{ opacity:1; } }
+
+    /* Mobile Responsive */
+    @media (max-width:600px){
+      .hero h1{ font-size:2.2rem; }
+      .footer-container{ flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" style="
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('image/Marketing.jpg') center/cover no-repeat;
+  ">
+    <h1 class="fade-in">Strategic & Effective Digital Marketing</h1>
+    <p class="fade-in delay">Grow your brand with data-driven marketing — SEO, social media, content, ads and analytics.</p>
+    <button class="cta fade-in delay2">Get Started</button>
+  </section>
+
+  <!-- About Marketing -->
+  <section class="content">
+    <h2>What is Digital Marketing?</h2>
+    <p>
+      Digital marketing uses online channels and data to build brand awareness, attract customers, and drive conversions.
+      Services include search engine optimization (SEO), paid advertising (PPC), social media, content marketing,
+      email campaigns, and analytics-driven optimizations to maximize ROI.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Marketing Services</h2>
+
+    <div class="service-box">
+      <h3>Search Engine Optimization (SEO)</h3>
+      <p>Improve organic rankings, optimize on-page content, technical SEO audits, and local SEO strategies.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Social Media Marketing</h3>
+      <p>Strategy, content calendars, paid social ads, community management and growth on platforms like Facebook, Instagram & LinkedIn.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Content Marketing</h3>
+      <p>Blog posts, landing pages, video scripts, and lead magnets that attract and nurture your audience.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Paid Ads (PPC)</h3>
+      <p>Google Ads, display campaigns, retargeting and conversion optimization to maximize ad performance.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Email & Automation</h3>
+      <p>Drip campaigns, newsletters, CRM integrations and automated workflows to convert and retain customers.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Analytics & CRO</h3>
+      <p>Data tracking, dashboards, A/B testing, and conversion rate optimization to improve campaign ROI.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>Netgene Technologies</h3>
+        <p>
+          Netgene Technologies — founded by engineering graduates — delivers smart and reliable digital solutions
+          for students and businesses: web, apps, IT and marketing services.
+        </p>
+
+        <p class="footer-contact">
+          <i class='bx bxs-phone'></i> +91 95001 26711 <br>
+          <i class='bx bxs-envelope'></i> netgenetechnologies@gmail.com
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Our Category</h3>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">IT Solutions</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Project Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund & Returns</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Location</h3>
+        <iframe
+          src="https://www.google.com/maps?q=13.035028,80.154833&z=16&output=embed"
+          width="100%" height="160" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Netgene Technologies. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    // Scroll animation
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll(".service-box").forEach(box => {
+        const boxPos = box.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.2;
+        if (boxPos < screenPos) {
+          box.style.opacity = "1";
+          box.style.transform = "translateY(0)";
+          box.style.transition = ".6s ease-out";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
